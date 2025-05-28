@@ -1,0 +1,701 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif; /* Pode mudar para 'Roboto', 'Open Sans' se importar fontes */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Cor de fundo suave */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo img {
+    height: 40px; /* Ajuste o tamanho do logo */
+}
+
+.header .nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header .nav-menu li {
+    margin-left: 30px;
+}
+
+.header .nav-menu a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.header .nav-menu a:hover {
+    color: #007bff; /* Ou a cor azul do seu design */
+}
+
+.login-area {
+    margin-left: 30px;
+}
+
+.btn-entrar {
+    background-color: #007bff; /* Azul do botão "Entrar" */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre o texto e a seta */
+    transition: background-color 0.3s ease;
+}
+
+.btn-entrar:hover {
+    background-color: #0056b3; /* Azul mais escuro no hover */
+}
+
+.arrow-down {
+    font-size: 0.8em;
+}
+
+/* Seção Principal (Hero Section) */
+.main-content {
+    padding: 40px 0;
+}
+
+.hero-section {
+    background-color: #e0f2f7; /* Cor de fundo do bloco maior, um azul bem claro */
+    border-radius: 15px; /* Bordas arredondadas */
+    display: flex;
+    align-items: center;
+    max-width: 1000px; /* Largura do seu bloco central */
+    margin: 0 auto;
+    overflow: hidden; /* Para garantir que a imagem não vaze */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-box {
+    flex: 1;
+    padding: 40px;
+    color: #333;
+    max-width: 50%; /* Ocupa metade do espaço */
+}
+
+.hero-box h1 {
+    font-size: 2.5em;
+    color: #3f51b5; /* Azul mais escuro para o título, como no design */
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-box p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.btn-saiba-mais {
+    background-color: #6a82fb; /* Azul do botão "Saiba Mais" */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px; /* Bordas mais arredondadas */
+    text-decoration: none;
+    display: inline-flex; /* Para alinhar texto e seta */
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-saiba-mais:hover {
+    background-color: #516be6; /* Azul mais escuro no hover */
+}
+
+.arrow-right {
+    font-size: 1.2em;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%; /* Ocupa a outra metade */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove espaço extra abaixo da imagem */
+    border-radius: 0 15px 15px 0; /* Bordas arredondadas apenas na lateral direita */
+}
+
+/* Rodapé (básico) */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px; /* Espaçamento do conteúdo principal */
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .nav-menu ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .header .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .login-area {
+        margin-left: 0;
+        margin-top: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-entrar {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-box, .hero-image {
+        max-width: 100%; /* Ocupa a largura total em telas pequenas */
+        padding: 0; /* Remover padding excessivo em telas menores */
+    }
+
+    .hero-box {
+        margin-bottom: 30px;
+    }
+
+    .hero-box h1 {
+        font-size: 2em;
+    }
+
+    .hero-image img {
+        border-radius: 15px; /* Arredondar todas as bordas da imagem em telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-box h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-box p {
+        font-size: 1em;
+    }
+}
+/* Estilos da Seção de Escolha de Login */
+.main-content.login-choice-background {
+    background-color: #f8fbfd; /* Um fundo azul muito claro ou cinza claro para a seção de escolha */
+    min-height: calc(100vh - 120px); /* Altura mínima para preencher a tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.login-choice-section {
+    width: 100%;
+    max-width: 1000px; /* Largura máxima da seção dos cartões */
+    text-align: center;
+}
+
+.login-choice-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.login-choice-box h2 {
+    color: #3f51b5; /* Azul do título principal */
+    margin-bottom: 15px;
+    font-size: 2.2em;
+}
+
+.login-choice-box p {
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+
+.profile-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px; /* Espaço entre os cartões */
+    flex-wrap: wrap; /* Permite que os cartões quebrem a linha em telas menores */
+}
+
+.profile-card {
+    background-color: #f0f8ff; /* Fundo azul claro para cada cartão */
+    border-radius: 10px;
+    padding: 30px;
+    flex: 1; /* Permite que os cartões cresçam e ocupem o espaço */
+    min-width: 250px; /* Largura mínima para cada cartão */
+    max-width: 30%; /* Para que 3 caibam em uma linha */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Para espaçar o conteúdo uniformemente */
+}
+
+.profile-card:hover {
+    transform: translateY(-5px); /* Efeito de "levantar" ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card img {
+    width: 80px; /* Tamanho dos ícones */
+    height: 80px;
+    margin-bottom: 20px;
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+}
+
+.profile-card h3 {
+    color: #007bff; /* Azul para o título do cartão */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.profile-card p {
+    color: #555;
+    font-size: 0.95em;
+    flex-grow: 1; /* Faz o parágrafo ocupar o espaço restante */
+    margin-bottom: 20px;
+}
+
+.profile-card .btn-profile {
+    background-color: #007bff; /* Azul para o botão de cada perfil */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Para o botão não ocupar 100% da largura do cartão */
+}
+
+.profile-card .btn-profile:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade para a seção de escolha de login */
+@media (max-width: 992px) {
+    .profile-card {
+        max-width: 45%; /* Duas colunas em telas médias */
+    }
+}
+
+@media (max-width: 768px) {
+    .login-choice-box {
+        padding: 25px;
+        margin: 10px;
+    }
+
+    .login-choice-box h2 {
+        font-size: 1.8em;
+    }
+
+    .profile-cards {
+        flex-direction: column; /* Uma coluna em telas pequenas */
+        align-items: center;
+    }
+
+    .profile-card {
+        max-width: 90%; /* Quase largura total */
+        margin-bottom: 20px; /* Espaço entre os cartões */
+    }
+}
+
+/* Estilos da Página "Quem Somos" */
+.main-content.quem-somos-background {
+    background-color: #f0f8ff; /* Um azul muito claro ou um cinza claro para a seção */
+    min-height: calc(100vh - 120px); /* Altura mínima */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.quem-somos-section {
+    width: 100%;
+    max-width: 900px; /* Largura máxima para o conteúdo da página */
+    text-align: left; /* Texto alinhado à esquerda para leitura fácil */
+}
+
+.quem-somos-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 20px auto;
+}
+
+.quem-somos-box h2 {
+    color: #3f51b5; /* Azul do título */
+    margin-bottom: 25px;
+    font-size: 2.5em;
+    text-align: center; /* Título centralizado */
+}
+
+.quem-somos-box h3 {
+    color: #007bff; /* Azul para subtítulos */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.quem-somos-box p {
+    color: #444;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.quem-somos-box ul {
+    list-style: disc; /* Bolinhas padrão */
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+
+.quem-somos-box ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.quem-somos-box ul li strong {
+    color: #3f51b5; /* Destaca os títulos das listas */
+}
+
+/* Responsividade Básica para a página "Quem Somos" */
+@media (max-width: 768px) {
+    .quem-somos-box {
+        padding: 25px;
+        margin: 10px;
+    }
+
+    .quem-somos-box h2 {
+        font-size: 2em;
+    }
+
+    .quem-somos-box h3 {
+        font-size: 1.5em;
+    }
+
+    .quem-somos-box p,
+    .quem-somos-box ul li {
+        font-size: 1em;
+    }
+}
+
+
+/* Estilos Comuns para Páginas de Cadastro (podem ser iguais aos de login ou ligeiramente diferentes) */
+.main-content.cadastro-page-background {
+    background-color: #e6f7ff; /* Um fundo azul muito claro, diferente do login */
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.cadastro-form-section {
+    width: 100%;
+    max-width: 500px; /* Um pouco mais largo que o login para mais campos */
+    text-align: center;
+}
+
+.cadastro-form-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 20px auto;
+}
+
+.cadastro-form-box h2 {
+    color: #3f51b5;
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+.cadastro-form-box p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1em;
+}
+
+/* Reutilizando form-group, input, label, message-success, message-error do login/feedback */
+
+.btn-cadastro {
+    background-color: #007bff; /* Azul para o botão de cadastro */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.btn-cadastro:hover {
+    background-color: #0056b3;
+}
+
+.login-link { /* Reutiliza o estilo do cadastro-link do login */
+    margin-top: 25px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade Básica para formulários de cadastro */
+@media (max-width: 768px) {
+    .cadastro-form-box {
+        padding: 25px;
+        margin: 10px;
+    }
+
+    .cadastro-form-box h2 {
+        font-size: 1.8em;
+    }
+}
+
+
+
+/* Estilos da Página "O Que Oferecemos" */
+.main-content.ofertas-background {
+    background-color: #f7fcff; /* Um fundo muito claro e neutro */
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.ofertas-section {
+    width: 100%;
+    max-width: 1000px; /* Mais largura para os blocos de conteúdo */
+    text-align: center;
+}
+
+.ofertas-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    margin: 20px auto;
+}
+
+.ofertas-box h2 {
+    color: #3f51b5; /* Azul do título */
+    margin-bottom: 25px;
+    font-size: 2.8em;
+}
+
+.ofertas-box .introducao {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.oferta-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px; /* Espaço entre os blocos de oferta */
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.oferta-item:nth-child(even) { /* Para alternar o fundo ou estilo de itens pares (opcional) */
+    background-color: #f9f9f9;
+}
+
+.oferta-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+.oferta-item h3 {
+    color: #007bff; /* Azul para o título da oferta */
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.oferta-item p {
+    color: #444;
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 700px; /* Limita a largura do parágrafo */
+}
+
+.oferta-item ul {
+    list-style: none; /* Remove bolinhas padrão */
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Alinha os itens da lista à esquerda */
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.oferta-item ul li {
+    background: url('icon_check.png') no-repeat left center; /* Substitua por um ícone de checkmark se tiver */
+    background-size: 20px;
+    padding-left: 30px; /* Espaço para o ícone */
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1em;
+}
+
+.chamada-para-acao {
+    margin-top: 50px;
+    padding: 40px;
+    background-color: #e6f7ff; /* Fundo mais claro para a chamada */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.chamada-para-acao p {
+    font-size: 1.5em;
+    color: #3f51b5;
+    margin-bottom: 20px;
+}
+
+.btn-chamada-acao {
+    background-color: #28a745; /* Verde para o CTA principal */
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px; /* Botão mais arredondado */
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.btn-chamada-acao:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.nota-chamada {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 15px;
+}
+
+.nota-chamada a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nota-chamada a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade Básica para a página "O Que Oferecemos" */
+@media (max-width: 768px) {
+    .ofertas-box {
+        padding: 25px;
+        margin: 10px;
+    }
+
+    .ofertas-box h2 {
+        font-size: 2.2em;
+    }
+
+    .ofertas-box .introducao {
+        font-size: 1em;
+    }
+
+    .oferta-item {
+        padding: 20px;
+    }
+
+    .oferta-item h3 {
+        font-size: 1.6em;
+    }
+
+    .oferta-item p, .oferta-item ul li {
+        font-size: 0.95em;
+    }
+
+    .chamada-para-acao {
+        padding: 25px;
+    }
+
+    .chamada-para-acao p {
+        font-size: 1.2em;
+    }
+
+    .btn-chamada-acao {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}

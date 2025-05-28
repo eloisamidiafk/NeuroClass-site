@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroClass: Cadastro Aluno</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="logo_neuroclass.png" alt="Logo NeuroClass">
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="quem_somos.html">Quem Somos</a></li>
+                </ul>
+            </nav>
+            <div class="login-area">
+                <a href="login.html" class="btn-entrar">Voltar ao Login</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content cadastro-page-background">
+        <section class="cadastro-form-section">
+            <div class="cadastro-form-box">
+                <h2>Crie sua Conta de Aluno</h2>
+                <p>Junte-se ao NeuroClass e comece sua jornada de aprendizado personalizado!</p>
+                <form id="form-cadastro-aluno">
+                    <div class="form-group">
+                        <label for="nome-aluno">Nome Completo:</label>
+                        <input type="text" id="nome-aluno" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-aluno-cadastro">Email:</label>
+                        <input type="email" id="email-aluno-cadastro" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senha-aluno-cadastro">Crie uma Senha:</label>
+                        <input type="password" id="senha-aluno-cadastro" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmar-senha-aluno">Confirme a Senha:</label>
+                        <input type="password" id="confirmar-senha-aluno" name="confirm_password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="data-nascimento-aluno">Data de Nascimento:</label>
+                        <input type="date" id="data-nascimento-aluno" name="data_nascimento" required>
+                    </div>
+                     <div class="form-group">
+                        <label for="condicao-aluno">Principal Condição Neurodivergente (opcional):</label>
+                        <select id="condicao-aluno" name="condicao_neuro">
+                            <option value="">Selecione uma opção</option>
+                            <option value="TEA">Transtorno do Espectro Autista (TEA)</option>
+                            <option value="TDAH">TDAH (Transtorno de Déficit de Atenção e Hiperatividade)</option>
+                            <option value="Dislexia">Dislexia</option>
+                            <option value="Outra">Outra</option>
+                            <option value="NaoInformar">Prefiro não informar</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-cadastro">Cadastrar</button>
+                    <p id="feedback-cadastro-aluno" class="message-success" style="display: none;"></p>
+                    <p id="erro-cadastro-aluno" class="message-error" style="display: none;"></p>
+                    <p class="login-link">Já tem uma conta? <a href="login_aluno.html">Faça login aqui</a></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 NeuroClass. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

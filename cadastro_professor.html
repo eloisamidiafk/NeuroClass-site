@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroClass: Cadastro Professor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="logo_neuroclass.png" alt="Logo NeuroClass">
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="quem_somos.html">Quem Somos</a></li>
+                </ul>
+            </nav>
+            <div class="login-area">
+                <a href="login.html" class="btn-entrar">Voltar ao Login</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content cadastro-page-background">
+        <section class="cadastro-form-section">
+            <div class="cadastro-form-box">
+                <h2>Crie sua Conta de Professor</h2>
+                <p>Compartilhe seu conhecimento e acesse recursos para uma educação inclusiva.</p>
+                <form id="form-cadastro-professor">
+                    <div class="form-group">
+                        <label for="nome-professor">Nome Completo:</label>
+                        <input type="text" id="nome-professor" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-professor-cadastro">Email Institucional:</label>
+                        <input type="email" id="email-professor-cadastro" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senha-professor-cadastro">Crie uma Senha:</label>
+                        <input type="password" id="senha-professor-cadastro" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmar-senha-professor">Confirme a Senha:</label>
+                        <input type="password" id="confirmar-senha-professor" name="confirm_password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="escola-professor">Nome da Instituição de Ensino:</label>
+                        <input type="text" id="escola-professor" name="escola" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="area-atuacao-professor">Área de Atuação:</label>
+                        <input type="text" id="area-atuacao-professor" name="area_atuacao" placeholder="Ex: Educação Especial, Ensino Fundamental">
+                    </div>
+                    <button type="submit" class="btn-cadastro">Cadastrar</button>
+                    <p id="feedback-cadastro-professor" class="message-success" style="display: none;"></p>
+                    <p id="erro-cadastro-professor" class="message-error" style="display: none;"></p>
+                    <p class="login-link">Já tem uma conta? <a href="login_professor.html">Faça login aqui</a></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 NeuroClass. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
